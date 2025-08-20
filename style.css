@@ -1,0 +1,233 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #080808;
+    color: #fff;
+}
+#header{
+    width: 100% ;
+    height: 100vh;
+    background-image:url(background.img.png);
+    background-size: cover;
+    background-position: center;
+}   
+.container{
+    padding: 10px 10px
+}
+nav{
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 20px;
+}
+nav ul li{ 
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position:relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #ffffffa2;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.3s;
+}
+.header-text{
+    margin-top: 30px;
+    font-size : 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-bottom:40px;
+    margin-top: 2px;
+}
+.header-text h1 span{
+    -webkit-text-stroke: 1px #ca0e0e;
+    color: #ca0e0e;;
+    display:inline-block;
+    animation:display-text 12s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text{
+    25%,100%{
+        display:none;
+    }
+}
+/*-------------about section-----------------*/
+#about{
+    padding:360px 0;
+    color:#ffffff;
+    margin-top:170px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis:35%;
+}
+.about-col-1 img{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+}
+.about-col-2{
+    flex-basis: 55%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight:600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.tab-titles{
+    display: flex; 
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size:18px;
+    font-weight:500;
+    position: relative;
+    cursor: pointer;
+}
+.tab-links::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #05abeca2;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+.tab-links.active::after{
+    width: 70%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin:10px  0;
+}
+.tab-contents ul li span{
+    color:#df0f0f;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none
+}
+.tab-contents.active{
+    display: block;
+}
+/*----------services section------------*/
+#services{
+    padding: 20px 0;
+    color: #ffffff;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}   
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250pxpx, 1fr));
+    grid-gap: 40px;
+    margin-top:50px;
+}
+.services-list div{
+    background-color: #000000;
+    padding: 40px;
+    font-weight: 300;
+    font-size: 15px;
+    border-radius: 15px;
+    transition:  transform 0.5s;
+}
+.services-list div h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+    color:#dd510a;
+}
+.services-list div :hover{  
+    background: #e60404a2;
+    transform:translateY(-5px);
+}
+/*----------contact section------------*/
+#contact{
+    padding: 20px 0;
+    color: #ffffff;
+}
+.contact-left{
+    flex-basis: 35%;
+}   
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+    font-size: 20px;
+}   
+.btn.btn2{
+    display: inline-block;
+    background: #ffae00;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.contact-right form{
+    width:100%;
+}
+form input, form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    color:#fff;
+    background:#262626;
+}
+form.btn2{
+    padding:14px 60px;
+    font-size:18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/*----------footer section------------*/
+.copyright{
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 300;
+    margin-top:30px;
+    color: #0bbfe8;
+}
+
+

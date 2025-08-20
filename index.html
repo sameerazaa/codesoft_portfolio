@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <span>Samee Raza Ansari</span>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+            </nav>
+            <div class="header-text">
+                <h1> HI, I'm 
+                    <span style="--i:3;">Fresher</span>
+                    <span style="--i:2;">Frontend developer</span>
+                    <span style="--i:1;">Web designer</span>
+                </h1>
+        </div>
+    </div>
+    <!----------about section---------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aboutpic.png">
+                </div>
+                <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>A highly enthusiastic and motivated individual looking to begin my career in a dynamic and growth-oriented organization.Eager to kickstart my professional journey in the tech industry. With a strong foundation in programming, web development, and problem-solving, I thrive on learning new technologies and applying them to real-world challenges.</p>
+My goal is to contribute meaningfully to innovative projects and grow as a professional while adding value to the organization I work with. </p>
+                <div class="tab-titles">
+                    <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('language')">Language</p>
+                </div>
+                <div class ="tab-contents active" id="skills">
+                    <ul>
+                        <li><span>Web performance optimization</span><br></li>
+                        <li><span>Html</span><br></li>
+                        <li><span>CSS</span><br></li>
+                        <li><span>Javascript</span><br></li>
+                        <li><span>Problem solving</span><br></li>
+                        <li><span>Team work and collaboration</span><br></li>
+                        <li><span>Version control (Git)</span><br></li>
+                        <li><span>Curious learner</span><br></li>
+                    </ul>
+                </div>
+                <div class ="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>Higher Secondary from Gorakhpur Public School</li>
+                        <li><span>2024</span><br> Pursuing B.Tech from Ajay Kumar Garg Engg College, Ghaziabad<br>1st semester : 8.14 sgpa</li>
+                    </ul>
+                </div>
+                <div class ="tab-contents" id="experience">
+                    <ul>
+                        <li><span>@Codesoft</span><br>Webdeveloper @intern <br>(20/07/2025-20/08/2025)</li>
+                    </ul>
+                </div>
+                <div class ="tab-contents" id="language">
+                    <ul>
+                        <li><span>English</span><br>Fluent</li>
+                        <li><span>Hindi</span><br>Fluent</li>
+                    </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+<!----------services section---------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Creating responsive and user-friendly websites using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div>
+                <h2>Frontend developer</h2>
+                <p>Building interactive and dynamic web applications with a focus on performance and usability.</p>
+            </div>    
+        </div>
+    </div>
+</div>
+<!-------contact section---------->
+<div id="contact">
+    <div class="container">
+        <div class =row>
+            <div class=" contact-left">
+                 <h1 class="sub-title">Contact Me</h1>
+                 <p>Email Id: sameeraza926@gmail.com</p>
+                 <p>Contact number :6393486573</p><br>
+                 <div class="social-icons">
+                     <a href="https://www.linkedin.com/in/samee-raza/"><img src="linkedin.png"width="25"/></a>
+                     <a href="https://github.com/sameerazaa"><img src="github.png"width="25"/></a>
+                 </div>
+                 <a href="#" class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right"> 
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email"name="email" placeholder="Your Email" required>
+                <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>    
+            </div>
+        </div>
+    </div>      
+</div>
+<!----------footer section---------->
+<div id="footer">
+    <div class="copyright">
+        <p>@ All rights reserved.Designed by Samee Raza Ansari.</p>
+    </div> 
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("active");
+    }
+</script>
+    </body>
+    </html>
